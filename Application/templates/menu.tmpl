@@ -1,0 +1,233 @@
+<!-- fichier menu.tmpl --> 
+<html>
+<head> 
+  <title>Home</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>   
+
+    table.mon_tableau1  {
+        border-collapse: collapse;
+    }
+    table.mon_tableau1 td {
+       	border: 10px solid 'white';
+       	padding: 10px;
+       	font-family: "calibri";
+       	font-size: 16px;
+  		border-radius: 8px;
+    } 
+
+    table.mon_tableau2  {
+        border-collapse: collapse;
+    }
+    table.mon_tableau2 tr {
+       	border: 10px solid 'white';
+       	padding: 10px;
+       	font-family: "calibri";
+       	font-size: 16px;
+		border-radius: 10px;
+    } 
+    table.mon_tableau2 tr:nth-child(even) {background: #D1DFF3}
+    table.mon_tableau2 tr:nth-child(odd) {background: #6E88AB}
+
+    input.bouton {
+    	color:white;
+    	background:#E87151;
+  		border-radius: 10px;
+    }
+    input.saisie {
+    	color:#436793;
+       	font-size: 14px;
+       	background: #DDECFE;
+       	text-align: center;
+       	border: 2px solid white;
+  		border-radius: 6px;
+    }  
+ 
+    table.barre  {
+        border-collapse: collapse;
+		height : 20px;
+    }
+    table.barre td {
+       	border: 10px solid 'white';
+       	padding: 10px;
+       	font-family: "calibri";
+       	font-size: 16px;
+  		border-radius: 16px;
+  		color:#425E76;
+  		background: #96B58F;
+    }
+
+	a {
+		text-decoration:none;
+	}
+	span {
+		color:white;
+  		font-style: bold;
+	}
+	a.tip span {
+		display: none
+	}
+	a.tip:hover span {
+		display: block;
+		z-index: 100;
+		width: 50px;
+		position: relative;
+	}
+    
+  </style>
+</head>
+
+<body style="background-image:url(http://www.design-architecte.fr/wp-content/uploads/2018/04/fond-laei2.jpg)">
+
+<table class="barre" width="100%">
+	<tr>
+		<td width=80 align="center">
+			<a href='\app_enron/' class="tip">
+				<img src="https://cdn1.iconfinder.com/data/icons/gradient-android-apps/64/1-22-128.png" height=40></img>
+				<span>Home</span>
+			</a>
+		</td>
+		<td width=80 align="center">
+			<a href='\app_enron/employes/' class="tip">
+				<img src="https://cdn2.iconfinder.com/data/icons/seo-flat-6/128/38_Target_Audience-256.png" height=40></img>
+				<span style="padding-right:10px">Employés</span>
+			</a>
+		</td>
+		<td align="center">
+			<font style="font-size:20px"><b>Application de visualisation de données issus de l'entreprise Enron</b></font>
+		</td>
+	</tr>
+</table>
+
+<br><br><br>
+
+<p align='center'><img src='https://upload.wikimedia.org/wikipedia/fr/thumb/2/2f/EnronLogo.png/280px-EnronLogo.png'></img></p>
+
+<font face='calibri'>
+<font color=#539861><h1 align='center'>Home</h1></font>
+
+<br>
+
+
+<form action='\app_enron/search/' method='get'>
+<table class="mon_tableau1" align='center' width="60%">
+	<tr>
+		<td style="background: #D1DFF3">
+			<table class="mon_tableau2" align="center">
+				<tr  style='color : white'>
+					<td style="background:#607694" width="10%">
+						<input type="radio" id="glob1" name="glob" value="glob1">
+					</td>
+					<td align='center' colspan=2>
+							TYPE DE RECHERCHE
+							<div align="left">
+								<input type="radio" id="mess1" name="aff1" value="messages" style="padding-left:20px">
+								<label for="mess1">Tous les messages</label>
+								<br>
+								<input type="radio" id="rela1" name="aff1" value="relations">
+								<label for="rela1">Toutes les relations</label>
+								<br>
+								<input type="radio" id="discu1" name="aff1" value="discussions">
+								<label for="discu1">Toutes les discussions</label>
+							</div>
+					</td>
+				</tr>
+				<tr>
+					<td align='center' colspan=2><font color=#1E5199>- OU -</font></td>
+				</tr>
+				<tr  style='color : white'>
+							<td style="background:#607694" width="10%">
+								<input type="radio" id="glob2" name="glob" value="glob2">
+							</td>
+							<td align='center' style='padding-right:50px'> 
+									MESSAGES
+									<div align="left">
+										<input type="radio" id="env2" name="aff2" value="env">
+										<label for="env2">Envoyés</label>
+										<br>
+										<input type="radio" id="rec2" name="aff2" value="rec">
+										<label for="rec2">Reçus</label>
+										<br>
+										<input type="radio" id="cop2" name="aff2" value="cc">
+										<label for="rec2">Copie</label>
+										<br>
+										<input type="radio" id="copcach2" name="aff2" value="bcc">
+										<label for="rec2">Copie cachée</label>
+										<br>
+										<input type="radio" id="tous2" name="aff2" value="tous">
+										<label for="tous2">Tous</label>
+									</div>
+							</td> 
+							<td align='center'> 
+									Login de l'employé<br><br><input type='texte' id='login2' name='login2' size='20'  class="saisie" placeholder="Login employé">
+							</td>
+				</tr>
+				<tr>
+					<td align='center' colspan=2><font color=#1E5199>- OU -</font></td>
+				</tr>
+				<tr style='color : white'>
+							<td style="background:#607694" width="10%">
+								<input type="radio" id="glob3" name="glob" value="glob3">
+							</td>
+							<td align='center' colspan=2> 			  	
+									<div align="center">
+									Personnes participant à la discussion<br><br><input type='texte' id='discu3' name='discu3' size='20'  class="saisie" placeholder="Numero de la discussion">
+									</div>
+							</td>
+				</tr>
+			</table>
+		</td>
+		<td align='center' style='color:white;background:#6E88AB;'> 
+				<img src='https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png' height=50></img>
+				<br><br><br>		  		
+				Du : <br><input type='date' id='from' name='from' size='20'  class="saisie" value="0001-01-01">
+				<br><br>
+				Au : <br><input type='date' id='to' name='to' size='20'  class="saisie" value="9999-12-31">
+		</td>
+		<td align='center' style='color:white;background:#D1DFF3;'>
+			<input type='submit' value='►' class="bouton">
+		</td>
+	</tr>
+</table>
+</form>
+
+<br><br>
+
+<form action='\app_enron/ref/' method='get'>
+<table align='center' class="mon_tableau1">
+	<tr>
+		<td style="color:white;background:#6E88AB;">
+			<img src="https://cdn2.iconfinder.com/data/icons/business-yuk/32/mail-512.png" width=30/>
+		</td>
+		<td style="color:white;background:#6E88AB;">
+			&nbsp; &nbsp; Contenu et références du mail : <input type='texte' id='idmail' name='idmail' size='20'  class="saisie" placeholder="Numero du mail [id]">
+		</td>
+		<td align='center' style='color:white;background:#D1DFF3;'>
+			<input type='submit' value='►' class="bouton">
+		</td>
+	</tr>
+</table>
+</form>
+
+<form action='\app_enron/mails_discu/' method='get'>
+<table align='center' class="mon_tableau1">
+	<tr>
+		<td style="color:white;background:#6E88AB;">
+			<img src="https://cdn4.iconfinder.com/data/icons/digital-marketing-gradient-rave-and-glow/512/Relationship-512.png" width=30/>
+		</td>
+		<td style="color:white;background:#6E88AB;">
+			&nbsp; &nbsp; Tous les mails de la discussion : <input type='texte' id='iddiscu' name='iddiscu' size='20'  class="saisie" placeholder="Numero de discussion">
+		</td>
+		<td align='center' style='color:white;background:#D1DFF3;'>
+			<input type='submit' value='►' class="bouton">
+		</td>
+	</tr>
+</table>
+</form>
+
+<br><br>
+
+
+</font>
+</body>
+</html>

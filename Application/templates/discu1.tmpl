@@ -1,0 +1,132 @@
+<!-- fichier search.tmpl --> 
+<html>
+<head> 
+  <title>Recherche</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>   
+
+    table.mon_tableau1  {
+        border-collapse: collapse;
+    }
+    table.mon_tableau1 td {
+       	border: 10px solid 'white';
+       	padding: 10px;
+       	font-family: "calibri";
+       	font-size: 16px;
+  		border-radius: 8px;
+    } 
+
+    table.mon_tableau2 tr {
+       	border: 10px solid 'white';
+       	padding: 10px;
+       	font-family: "calibri";
+       	font-size: 16px;
+		border-radius: 10px;
+    }
+    table.mon_tableau2 tr:nth-child(even) {background: #D1DFF3}
+    table.mon_tableau2 tr:nth-child(odd) {background: #6E88AB}
+
+    input.bouton {
+    	color:white;
+    	background:#1E5199;
+  		border-radius: 6px;
+    }
+    input.saisie {
+    	color:#436793;
+       	font-size: 14px;
+       	background: #DDECFE;
+       	text-align: center;
+       	border: 2px solid white;
+  		border-radius: 6px;
+    }   
+    table.barre  {
+        border-collapse: collapse;
+		height : 20px;
+    }
+    table.barre td {
+       	border: 10px solid 'white';
+       	padding: 10px;
+       	font-family: "calibri";
+       	font-size: 16px;
+  		border-radius: 16px;
+  		color:#425E76;
+  		background: #96B58F;
+    }
+    
+	a {
+		text-decoration:none;
+	}
+	span {
+		color:white;
+  		font-style: bold;
+	}
+	a.tip span {
+		display: none
+	}
+	a.tip:hover span {
+		display: block;
+		z-index: 100;
+		width: 50px;
+		position: relative;
+	}
+  </style>
+</head>
+
+<body style="background-image:url(http://www.design-architecte.fr/wp-content/uploads/2018/04/fond-laei2.jpg)">
+
+<table class="barre" width="100%">
+	<tr>
+		<td width=80 align="center">
+			<a href='\app_enron/' class="tip">
+				<img src="https://cdn1.iconfinder.com/data/icons/gradient-android-apps/64/1-22-128.png" height=40></img>
+				<span>Home</span>
+			</a>
+		</td>
+		<td width=80 align="center">
+			<a href='\app_enron/employes/' class="tip">
+				<img src="https://cdn2.iconfinder.com/data/icons/seo-flat-6/128/38_Target_Audience-256.png" height=40></img>
+				<span style="padding-right:10px">Employés</span>
+			</a>
+		</td>
+		<td align="center">
+			<font style="font-size:20px"><b>Application de visualisation de données issus de l'entreprise Enron</b></font>
+		</td>
+	</tr>
+</table>
+
+<br><br><br>
+
+<p align='center'><img src='https://upload.wikimedia.org/wikipedia/fr/thumb/2/2f/EnronLogo.png/280px-EnronLogo.png'></img></p>
+
+<font face='calibri'>
+<font color=#5FAC6E><h1 align='center'>Recherche</h1></font>
+
+<table class="mon_tableau2" align='center'>
+	<tr>
+		<td align='center'>
+			Numero
+		</td>
+		<td align='center'>
+			Lien
+		</td>
+	</tr>
+	{% for m in emails %}
+	<form action="\app_enron/mails_discu" method="get">
+	<tr style='background:#95BDDF'>
+		<td>
+		{{m.discu}}
+		</td>
+		<td align='center'>
+		<input type="submit" name="iddiscu" value={{m.discu}}>
+		</td>
+	</tr>
+	</form>
+	{% endfor %}
+</table>
+
+<br>
+
+
+</font>
+</body>
+</html>

@@ -7,3 +7,4 @@ Nous avons un dossier 'enron' contenant un fichier 'employes.csv' un sous-dossie
 Nous créons une base de données grâce à l'ORM Django associé à Python.
 
 Une fois cette base de données créée, nous créons un logiciel à ouvrir dans le browser permettant d'intéragir avec les données et rechercher des informations particulières.
+C'est application n'est executable qu'en local.
