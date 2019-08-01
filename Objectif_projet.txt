@@ -1,10 +1,21 @@
-Ces données sont publiques et peuvent-être récupérée sur le site enrondata.org
+Ces données sont publiques et peuvent-être récupérées sur le site enrondata.org
 
-Nous avons un dossier 'enron' contenant un fichier 'employes.csv' un sous-dossier 'maildir'.
-'employes.csv' référence les employes, leurs caractéristiques et leurs adresses mails professionnelles.
-'maildir' contient tous les mails associés aux employes du fichier csv.
+ 
+
+Nous avons un dossier 'enron' contenant un fichier 'employes.csv' et un sous-dossier 'maildir'.
+
+   .'employes.csv' référence les employés, leurs caractéristiques et leurs adresses mails professionnelles.
+
+   .'maildir' contient tous les mails associés aux employés du fichier csv.
+
+ 
 
 Nous créons une base de données grâce à l'ORM Django associé à Python.
 
-Une fois cette base de données créée, nous créons un logiciel à ouvrir dans le browser permettant d'intéragir avec les données et rechercher des informations particulières.
-C'est application n'est executable qu'en local.
+ 
+
+Une fois cette base de données créée, nous créons un logiciel à ouvrir dans le navigateur permettant d'interagir avec les données et rechercher des informations particulières.
+
+ 
+
+Cette application n'est exécutable que localement et n'est donc pas disponible car non hébergée sur internet.
