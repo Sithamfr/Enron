@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 18 09:37:08 2019
-
-@author: cordier
-"""
 
 from django.urls import path, re_path
 from . import views
